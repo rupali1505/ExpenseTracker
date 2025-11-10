@@ -4,13 +4,14 @@ import "./addBalanceForm.css";
 
 export default function AddBalanceForm({ setIsOpen, setBalance }) {
   const [income, setIncome] = useState("");
-  const { enqueSnackbar } = useSnackbar();
+ const { enqueueSnackbar } = useSnackbar();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(income);
 
-    if (Number(income) < 0) {
-      enqueSnackbar("Income should be greater than Zero", {
+    if (income <= 0) {
+      enqueueSnackbar("Income should be greater than Zero", {
         variant: "warning",
       });
       setIsOpen(false);
@@ -18,6 +19,7 @@ export default function AddBalanceForm({ setIsOpen, setBalance }) {
     }
 
     setBalance((prev) => prev + Number(income));
+    enqueueSnackbar("Balance added successfully!", { variant: "success" });
     setIsOpen(false);
   };
 

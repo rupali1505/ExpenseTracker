@@ -4,7 +4,7 @@ import { SnackbarProvider } from "notistack";
 
 export default function App() {
   return (
-    <SnackbarProvider>
+    <SnackbarProvider maxSnack={2 }>
       <div>
         <Home />
       </div>

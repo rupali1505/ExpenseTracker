@@ -14,10 +14,10 @@ export default function Card(props) {
       }}
     >
       <h3>
-        {props.title}: ₹{props.money}
+        {props.title}: <span style={{ color:[props.color]}}>₹{props.money}</span>
       </h3>
-      <button onClick={props.handleClick} style={{borderRadius:"5px",
-        borderStyle:"none"
+      <button type="button" onClick={props.handleClick} style={{borderRadius:"5px",
+        borderStyle:"none", backgroundColor: props.btnName === "+ Add Income" ? "greenyellow" : "red", color:'white'
       }}>{props.btnName}</button>
     </div>
   );

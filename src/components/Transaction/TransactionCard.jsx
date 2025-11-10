@@ -15,7 +15,7 @@ export default function TransactionCard({ details, handleDelete, handleEdit }) {
             {details.category == "travel" && <BsSuitcase2 />}
           </div>
           <div>
-            <h5>{details.category}</h5>
+            <h5>{details.title}</h5>
             <p>{details.date}</p>
           </div>
         </div>

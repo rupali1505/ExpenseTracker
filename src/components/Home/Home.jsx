@@ -29,6 +29,8 @@ export default function Home() {
     travel: 0,
   });
 
+  
+
   useEffect(() => {
     const localBalance = localStorage.getItem("balance");
 
@@ -105,13 +107,15 @@ export default function Home() {
         <Card
           title={"Wallet Balance"}
           money={balance}
-          btnName={"+Add Income"}
+          color={'greenyellow'}
+          btnName={"+ Add Income"}
           handleClick={() => setIsOpenBalance(true)}
         />
         <Card
           title={"Expenses"}
           money={expense}
-          btnName={"+Add Expense"}
+          color={'orange'}
+          btnName={"+ Add Expense"}
           handleClick={() => setIsOpenExpense(true)}
         />
         <PieChart
