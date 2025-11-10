@@ -1,0 +1,14 @@
+.expense-container input,
+.expense-container select,
+.expense-container button {
+  width: 40%;
+  height: 25px;       
+  margin: 8px 0;
+  /* gap: 5px; */
+  padding-left: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+

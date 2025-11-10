@@ -16,7 +16,7 @@ export default function Card(props) {
       <h3>
         {props.title}: ₹{props.money}
       </h3>
-      <button style={{borderRadius:"5px",
+      <button onClick={props.handleClick} style={{borderRadius:"5px",
         borderStyle:"none"
       }}>{props.btnName}</button>
     </div>

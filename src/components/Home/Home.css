@@ -5,7 +5,29 @@
     display: grid;
     grid-template-columns:  repeat(3, 1fr);
     text-align: center;
-    gap: 20px;
+    gap: 10px;
    background-color: rgba(128, 128, 128, 0.399);
    border-radius: 10px;
+}
+
+.listConteiner{
+    margin: 20px;
+    display:grid;
+     grid-template-columns:  repeat(2, 1fr);
+     gap: 20px;
+    
+}
+
+
+@media (max-width:600px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .listConteiner{
+        display: flex;
+        flex-direction: column;
+    }
 }
